@@ -163,14 +163,19 @@
         .webring-nav {
 
             color: rgba(255, 255, 255, 0.9);
+        }
+
+        .webring-nav p {
             display: flex;
             justify-content: space-around;
-            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 10px;
         }
+
 
         .webring-link {
             background: #FF6B6B;
-            color: rgba(255, 255, 255, 0.9);
+            color: white;
             padding: 15px 30px;
             border-radius: 25px;
             text-decoration: none;
@@ -237,16 +242,21 @@
         </div>
 
         <footer class="dark-panel">
-            <div class=" webring-nav">
-                <a href="/api/previous" class="webring-link">← Previous Stand</a>
-                <a href="/api/random" class="webring-link">Random Stand</a>
-                <a href="https://github.com/andrewpetrucci/MediaManiacStandAnarcyWebRing"
-                    class="webring-link">GitHub</a>
-                <a href="/api/next" class="webring-link">Next Stand →</a>
+            <!-- webring navigation.  DO NOT CHANGE -->
+            <div class="webring-nav">
+                <p>
+                    <a href="/api/previous" class="webring-link">← Previous Stand</a>
+                    <a href="/api/next" class="webring-link">Next Stand →</a>
+                </p>
+                <p>
+                    <a href="/api/random" class="webring-link">Random Stand</a>
+                </p>
             </div>
             <p>🍋 Powered by pure sugar, water, and rebellion 🍋</p>
             <p>Part of the decentralized web revolution</p>
             <p>By the stans, for the stans</p>
+            <p><a href="https://github.com/andrewpetrucci/MediaManiacStandAnarcyWebRing">Project GitHub</a>
+            </p>
         </footer>
     </div>
 </body>
@@ -254,6 +264,7 @@
 <script>
     //////////////////////////////////////////////// This decides what ring to look at ///////////////////////////////////////////////
     const CSV_URL = 'https://raw.githubusercontent.com/AndrewPetrucci/LemonadeStandAnarcyWebRingApi/refs/heads/main/data.csv';
+
     ///////////////////////////////////////////////// navigation script. DO  NOT CHANGE ///////////////////////////////////////////////
     // Fetch CSV data on page load.
     window.addEventListener('DOMContentLoaded', () => {
